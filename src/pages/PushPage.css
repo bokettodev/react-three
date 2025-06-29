@@ -1,0 +1,210 @@
+.push-page {
+  padding: 2rem;
+  /* Учитываем боковые safe areas */
+  padding-left: max(2rem, env(safe-area-inset-left));
+  padding-right: max(2rem, env(safe-area-inset-right));
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+  
+  .push-page h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .push-page h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+  }
+  
+  .push-card {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .push-card.status {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  .push-card.install {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .push-card.permission {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  
+  .push-card.permission.denied {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .push-card.testing {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .push-card.info {
+    background: #e1f5fe;
+    border: 1px solid #b3e5fc;
+  }
+  
+  .push-card.troubleshooting {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .push-card.requirement {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  
+  .push-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    margin: 0.25rem;
+  }
+  
+  .push-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .push-button:active {
+    transform: translateY(0);
+  }
+  
+  .push-button.primary {
+    background: #007bff;
+    color: white;
+  }
+  
+  .push-button.primary:hover {
+    background: #0056b3;
+  }
+  
+  .push-button.success {
+    background: #28a745;
+    color: white;
+  }
+  
+  .push-button.success:hover {
+    background: #1e7e34;
+  }
+  
+  .push-button.warning {
+    background: #ffc107;
+    color: #212529;
+  }
+  
+  .push-button.warning:hover {
+    background: #e0a800;
+  }
+  
+  .push-button.danger {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .push-button.danger:hover {
+    background: #c82333;
+  }
+  
+  .push-button.info {
+    background: #17a2b8;
+    color: white;
+  }
+  
+  .push-button.info:hover {
+    background: #138496;
+  }
+  
+  .push-button.install {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .push-button.install:hover {
+    background: #45a049;
+  }
+  
+  .status-list {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .status-list li {
+    margin: 0.25rem 0;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .help-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .help-text p {
+    margin: 0.25rem 0;
+  }
+  
+  .troubleshooting-section {
+    background: #fff3cd;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+  }
+  
+  .troubleshooting-section h4 {
+    margin: 0 0 0.5rem 0;
+    color: #856404;
+  }
+  
+  .troubleshooting-section ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .troubleshooting-section ol li {
+    margin: 0.25rem 0;
+  }
+  
+  .emoji {
+    font-size: 1.2em;
+    margin-right: 0.25rem;
+  }
+  
+  @media (max-width: 768px) {
+  .push-page {
+    padding: 1rem;
+    /* Учитываем боковые safe areas на мобильных */
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .push-button {
+    width: 100%;
+  }
+}

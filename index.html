@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>3D Geometric Shapes Collection</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="background-color" content="#ffffff" />
+
+    <!-- Modern PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- iOS Safari PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="3D Shapes" />
+    <link rel="apple-touch-icon" href="./vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./vite.svg" />
+    <link rel="apple-touch-startup-image" href="./vite.svg" />
+    <meta name="application-name" content="3D Shapes" />
+
+    <!-- Additional PWA meta tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Windows PWA -->
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="./vite.svg" />
+    <meta
+      name="msapplication-tooltip"
+      content="3D Geometric Shapes Collection"
+    />
+    <meta name="msapplication-starturl" content="./" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- iOS Safari ES module support check -->
+    <script>
+      // Проверяем поддержку ES модулей в Safari
+      if (!("noModule" in HTMLScriptElement.prototype)) {
+        // Fallback для старых браузеров
+        document.body.innerHTML =
+          '<div style="padding: 20px; text-align: center; font-family: Arial;"><h2>Ваш браузер не поддерживается</h2><p>Пожалуйста, обновите Safari до последней версии</p></div>';
+      }
+    </script>
+
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
