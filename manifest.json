@@ -1,0 +1,30 @@
+{
+    "name": "3D Geometric Shapes Collection",
+    "short_name": "3D Shapes",
+    "description": "A collection of interactive 3D geometric shapes",
+    "start_url": "/react-three/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/react-three/vite.svg",
+        "sizes": "any",
+        "type": "image/svg+xml",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/react-three/vite.svg",
+        "sizes": "192x192",
+        "type": "image/svg+xml"
+      },
+      {
+        "src": "/react-three/vite.svg",
+        "sizes": "512x512",
+        "type": "image/svg+xml"
+      }
+    ],
+    "scope": "/react-three/",
+    "categories": ["3d", "graphics", "education"]
+  }
