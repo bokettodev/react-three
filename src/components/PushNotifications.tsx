@@ -1,5 +1,12 @@
+/**
+ * Компонент баннера push-уведомлений
+ * 
+ * Показывает временное уведомление об успешной настройке push-уведомлений
+ * после предоставления разрешений на iPhone (автообновление состояния)
+ */
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { usePushNotifications } from '../hooks/usePushNotifications';
 import { usePWA } from '../hooks/usePWA';
 
@@ -10,8 +17,14 @@ export const PushNotifications: React.FC = () => {
   } = usePushNotifications();
   
   const { isPWA } = usePWA();
+  const location = useLocation();
 
-  // Если уведомления настроены и работают, не показываем баннер
+  // Не показываем баннер на странице настройки push-уведомлений
+  if (location.pathname === '/push') {
+    return null;
+  }
+
+  // Если уведомления уже настроены и работают, не показываем ничего
   if (permission === 'granted' && isSubscribed && isPWA) {
     return null;
   }
